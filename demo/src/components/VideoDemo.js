@@ -13,10 +13,6 @@ export default class componentName extends Component {
     this.ref = React.createRef();
   }
     
-  componentDidMount (){
-    console.log(this.ref.current);
-  }
-    
   hanldeClick = (path)=>{
     console.log(path); 
     this.setState({

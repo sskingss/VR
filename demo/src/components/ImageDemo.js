@@ -10,7 +10,6 @@ export default class ImageDemo extends Component {
       mediaPhoto: myImage,
       yaww: 180,
       test: false,
-      updateText: "initial",
       author: "HanYiTech"
     };
     this.ref = React.createRef();
@@ -35,12 +34,6 @@ export default class ImageDemo extends Component {
       <div className="image_main">
         <div style={{ display: "flex", flexDirection: "row" }}>
           <button
-            onClick={() => this.setState(prevState => ({ author: "change" }))}
-          >
-            {" "}
-            change author{" "}
-          </button>
-          <button
             onClick={() =>
               this.setState(prevState => ({ yaww: prevState.yaww + 10 }))
             }
@@ -48,11 +41,6 @@ export default class ImageDemo extends Component {
             {" "}
             change yaw{" "}
           </button>
-          <button onClick={() => this.setState({ updateText: "after update" })}>
-            {" "}
-            Should not update{" "}
-          </button>
-          <h3>{this.state.updateText}</h3>
           <button
             onClick={() => {
               this.setState({ test: true, yaww: 100, mediaPhoto: myImage });
