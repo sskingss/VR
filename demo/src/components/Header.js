@@ -8,7 +8,7 @@ export default () => {
           href="/"
           className="main-header__brand"
         >
-            Pannellum React Component
+            VR 图片视频演示 demo
         </a>
       </div>
     </header>
