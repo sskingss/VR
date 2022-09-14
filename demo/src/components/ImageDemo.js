@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Pannellum } from "../../../src";
+// import { getImage } from "../utils/changeToBlob";
 import myImage from "../images/alma.jpg";
 import myImage2 from "../images/milan.jpg";
 
@@ -61,7 +62,7 @@ export default class ImageDemo extends Component {
             ref={this.ref}
             width="800px"
             height="400px"
-            image={this.state.mediaPhoto}
+            image={getImage(imageUrl)}
             pitch={10}
             yaw={this.state.yaww}
             hfov={120}
