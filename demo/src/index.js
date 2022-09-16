@@ -11,7 +11,7 @@ class Demo extends Component {
       <div className="app">
         <Header />
         <ImageDemo />
-        <VideoDemo />
+        {/* <VideoDemo /> */}
       </div>
     );
   }

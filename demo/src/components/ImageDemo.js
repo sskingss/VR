@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import { Pannellum } from "../../../src";
-// import { getImage } from "../utils/changeToBlob";
 import myImage from "../images/alma.jpg";
 import myImage2 from "../images/milan.jpg";
+
+// const img = getImage('https://zhangjianxin-1258826895.cos.ap-guangzhou.myqcloud.com/milan.jpg')
 
 export default class ImageDemo extends Component {
   constructor(props) {
@@ -62,7 +63,7 @@ export default class ImageDemo extends Component {
             ref={this.ref}
             width="800px"
             height="400px"
-            image={getImage(imageUrl)}
+            image={this.state.mediaPhoto}
             pitch={10}
             yaw={this.state.yaww}
             hfov={120}
@@ -77,13 +78,13 @@ export default class ImageDemo extends Component {
               text="Info Hotspot Text 3"
               URL="https://github.com/farminf"
             />
-
+            {/* 这些可点击热点可以实现场景的转换 */}
             <Pannellum.Hotspot
               type="custom"
-              pitch={31}
-              yaw={150}
+              pitch={0}
+              yaw={110}
               handleClick={(evt, args) => this.hanldeClickImage(evt, args)}
-              handleClickArg={{ name: "test" }}
+              handleClickArg={{ name: "changeScene" }}
             />
           </Pannellum>
         </div>
