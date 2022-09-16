@@ -63,6 +63,7 @@ export default class ImageDemo extends Component {
             ref={this.ref}
             width="800px"
             height="400px"
+            type='cubemap'
             image={this.state.mediaPhoto}
             pitch={10}
             yaw={this.state.yaww}
@@ -70,6 +71,13 @@ export default class ImageDemo extends Component {
             autoLoad
             author={this.state.author}
             title=""
+            autoRotate="1" // 自动旋转，可填转动角速度
+            cubeMap={["https://img.alicdn.com/imgextra/i4/O1CN014TNffn1nlaTfA98Fg_!!6000000005130-0-tps-1500-1500.jpg",
+                      "https://img.alicdn.com/imgextra/i3/O1CN01LsO1Bk20QbKpFTUQr_!!6000000006844-0-tps-1500-1500.jpg",
+                      "https://img.alicdn.com/imgextra/i1/O1CN01sS5m781ya6JgLSaVk_!!6000000006594-0-tps-1500-1500.jpg",
+                      "https://img.alicdn.com/imgextra/i3/O1CN01uTWCLc1XOCOuA92H0_!!6000000002913-0-tps-1500-1500.jpg",
+                      "https://img.alicdn.com/imgextra/i4/O1CN016lU3YJ1JdrJuFTcWt_!!6000000001052-0-tps-1500-1500.jpg",
+                      "https://img.alicdn.com/imgextra/i2/O1CN01nYe2Mn1ohkmBVyKpp_!!6000000005257-0-tps-1500-1500.jpg",]}
           >
             <Pannellum.Hotspot
               type="info"

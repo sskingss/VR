@@ -74,6 +74,9 @@ class Pannellum extends PureComponent {
   };
 
   static defaultProps = {
+    // 支持 cubemap 模式
+    type: 'equirectangular',
+    cubeMap: [],
     children: [],
     width: "100%",
     height: "400px",
@@ -169,7 +172,7 @@ class Pannellum extends PureComponent {
     }
 
     let jsonConfig = {
-      type: "equirectangular",
+      type: this.props.type,
       panorama: this.props.image,
       haov: this.props.haov,
       vaov: this.props.vaov,
@@ -203,6 +206,9 @@ class Pannellum extends PureComponent {
       hotSpotDebug: this.props.hotspotDebug,
       hotSpots: hotspotArray,
       onRender: this.props.onRender,
+      // 支持 cubeMap
+      cubeMap: this.props.cubeMap,
+
     };
 
     Object.keys(jsonConfig).forEach(
